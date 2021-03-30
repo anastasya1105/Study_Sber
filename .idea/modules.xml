@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/lesson4/Communicate-service/Communicate-service.iml" filepath="$PROJECT_DIR$/lesson4/Communicate-service/Communicate-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson4/FotoExchange-Service/FotoExchange-Service.iml" filepath="$PROJECT_DIR$/lesson4/FotoExchange-Service/FotoExchange-Service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson4/Profile/Profile.iml" filepath="$PROJECT_DIR$/lesson4/Profile/Profile.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson4/Server/Server.iml" filepath="$PROJECT_DIR$/lesson4/Server/Server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Study2.iml" filepath="$PROJECT_DIR$/Study2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson4/lesson4.iml" filepath="$PROJECT_DIR$/lesson4/lesson4.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Communicate-service" />
+        <module name="FotoExchange-Service" />
+        <module name="Server" />
+        <module name="Profile" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Communicate-service" target="1.8" />
+      <module name="FotoExchange-Service" target="1.8" />
+      <module name="lesson4" target="1.8" />
+      <module name="Profile" target="1.8" />
+      <module name="Server" target="1.8" />
+      <module name="Study2" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
