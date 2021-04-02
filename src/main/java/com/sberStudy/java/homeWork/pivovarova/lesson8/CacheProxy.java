@@ -83,7 +83,12 @@ public class CacheProxy<T> implements InvocationHandler {
             key = method.getAnnotation(Cache.class).fileName();
         }
         if (key.isEmpty()) {
-            key = method.getName();
+            if (zip) {
+                key = method.getName() + ".zip";
+            }
+            else {
+                key = method.getName();
+            }
         }
         return key;
     }

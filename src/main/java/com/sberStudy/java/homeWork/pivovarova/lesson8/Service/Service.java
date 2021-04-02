@@ -24,6 +24,4 @@ public interface Service {
     @Cache(cacheType = CacheType.FILE, fileName = "EmployeeCache", identifyByArgNumbers = {0})
     Employee findEmployee(int personalFileNumber, String surname);
 
-
-//fileName = "EmployeeCache",
 }

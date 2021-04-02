@@ -4,13 +4,11 @@ import com.sberStudy.java.homeWork.pivovarova.lesson8.Service.Service;
 import com.sberStudy.java.homeWork.pivovarova.lesson8.Service.ServiceImpl;
 import com.sberStudy.java.homeWork.pivovarova.lesson8.forExample.Employee;
 import com.sberStudy.java.homeWork.pivovarova.lesson8.forExample.EmployeeManager;
-import junit.framework.TestCase;
-import org.junit.Before;
 import org.junit.Test;
 
 import java.util.List;
 
-public class CacheTest extends TestCase {
+public class CacheTest {
 
     ServiceImpl service = new ServiceImpl();
     String cacheDir = "src/test/resources/lesson8";

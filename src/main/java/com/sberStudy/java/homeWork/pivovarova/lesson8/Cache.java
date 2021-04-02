@@ -1,7 +1,6 @@
 package com.sberStudy.java.homeWork.pivovarova.lesson8;
 
 import java.lang.annotation.*;
-import static com.sberStudy.java.homeWork.pivovarova.lesson8.CacheType.IN_MEMORY;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
