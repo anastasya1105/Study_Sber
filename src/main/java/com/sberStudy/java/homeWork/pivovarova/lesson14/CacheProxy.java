@@ -62,15 +62,15 @@ public class CacheProxy<T> implements InvocationHandler{
                     }
                 }
                 if (cacheType.equals(CacheType.IN_MEMORY)) {
-                    synchronized (this) {
+//                    synchronized (this) {
                         cacheValue = valueForCacheMap.getFromCache(args);
-                    }
+//                    }
                     if (cacheValue != null) {
                         return cacheValue;
                     } else {
-                        synchronized (this) {
+//                        synchronized (this) {
                             return valueForCacheMap.putInCache(args, invoke(method, args));
-                        }
+//                        }
                     }
                 } else {
                     throw new IllegalArgumentException("Для данного метода неправильно указан CacheType. Возможные варианты: CacheType.FILE или CacheType.IN_MEMORY");

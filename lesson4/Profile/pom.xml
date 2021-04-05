@@ -11,6 +11,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>Profile</artifactId>
+
     <dependencies>
         <dependency>
             <groupId>com.sberStudy.java.homeWork.pivovarova</groupId>

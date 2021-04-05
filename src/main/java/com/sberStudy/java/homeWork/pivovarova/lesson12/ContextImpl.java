@@ -43,16 +43,16 @@ public class ContextImpl implements Context {
     }
 
     @Override
-    public void interrupt() {
-
-        lock.lock();
-        try {
-            for (ContextThread thread : threads) {
+    public synchronized void interrupt() {
+        for (ContextThread thread : threads) {
+            if (thread.getState().equals(Thread.State.NEW)) {
                 thread.interrupt();
                 interruptedTaskCount++;
             }
-        } finally {
-            lock.unlock();
+//            if (thread.getState().equals(Thread.State.TIMED_WAITING)) {
+//                thread.interrupt();
+//                interruptedTaskCount++;
+//            }
         }
     }
 
@@ -62,8 +62,9 @@ public class ContextImpl implements Context {
     }
 
     @Override
-    public boolean isFinished() {
+    public synchronized boolean isFinished() {
         return threads.isEmpty();
+
     }
 
 
@@ -80,23 +81,32 @@ public class ContextImpl implements Context {
 
                 synchronized (this) {
                     target.run();
-                    completedTaskCount++;
-                    threads.remove(this);
+                    if (!Thread.currentThread().isInterrupted()) {
+                        completedTaskCount++;
+                        Thread.currentThread().interrupt();
+                        taskCount--;
+                    }
                 }
             }
             catch (Exception e) {
                 synchronized (this) {
-                    exceptionsQueue.add(e);
-                    failedTaskCount++;
+                    if (!Thread.currentThread().isInterrupted()) {
+                        exceptionsQueue.add(e);
+                        failedTaskCount++;
+                        Thread.currentThread().interrupt();
+                        taskCount--;
+                    }
                 }
             }
-            if (threads.size() == 0){
+            if (taskCount == 0){
                 finishWork();
             }
         }
 
         private synchronized void finishWork() {
-            new Thread(callback).start();
+            Thread thread = new Thread(callback);
+            thread.start();
+            thread.interrupt();
         }
     }
 

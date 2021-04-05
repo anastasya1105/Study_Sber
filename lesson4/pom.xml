@@ -11,34 +11,10 @@
 
     <artifactId>lesson4</artifactId>
     <packaging>pom</packaging>
-
-
     <modules>
         <module>Server</module>
         <module>Profile</module>
         <module>FotoExchange-Service</module>
         <module>Communicate-service</module>
     </modules>
-<!--    <dependencies>-->
-<!--        <dependency>-->
-<!--            <groupId>com.sberStudy.java.homeWork.pivovarova</groupId>-->
-<!--            <artifactId>Profile</artifactId>-->
-<!--            <version>1.0-SNAPSHOT</version>-->
-<!--            <scope>test</scope>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>com.sberStudy.java.homeWork.pivovarova</groupId>-->
-<!--            <artifactId>Communicate-service</artifactId>-->
-<!--            <version>1.0-SNAPSHOT</version>-->
-<!--            <scope>test</scope>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>com.sberStudy.java.homeWork.pivovarova</groupId>-->
-<!--            <artifactId>FotoExchange-Service</artifactId>-->
-<!--            <version>1.0-SNAPSHOT</version>-->
-<!--            <scope>test</scope>-->
-<!--        </dependency>-->
-<!--    </dependencies>-->
-
-
 </project>

@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/lesson4/Communicate-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson4/Communicate-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson4/FotoExchange-Service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson4/FotoExchange-Service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson4/Profile/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson4/Profile/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson4/Server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson4/Server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson4/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson4/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/test/resources/EncryptedTest/Date" charset="windows-1251" />
   </component>
 </project>
