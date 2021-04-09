@@ -1,7 +1,8 @@
 package com.sberStudy.java.homeWork.pivovarova.lesson16;
 
-
+import org.h2.tools.Server;
 import org.junit.Test;
+//import org.junit.jupiter.api.BeforeAll;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -12,17 +13,19 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class FibonacciTest {
+    private static CalculatorFi calculator;
+
+//    @BeforeAll
+    public void createTable() throws SQLException {
+        DateSourceHelper.createDb();
+        Server.createTcpServer().start();
+
+    }
 
     @Test
     public void test() {
-        MySQLite myTable = new MySQLite();
-        try {
-            myTable.createTableEx();
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
-        }
         long start = System.currentTimeMillis();
-        CalculatorFi calculator = CalculatorFibonacciHandler.cache(new CalculatorFibonacci());
+        calculator = CalculatorFibonacciHandler.cache(new CalculatorFibonacci());
         System.out.println(calculator.fibonachi(5));
         System.out.println(calculator.fibonachi(7));
         System.out.println(calculator.fibonachi(14));
@@ -44,15 +47,6 @@ public class FibonacciTest {
 
     @Test
     public void testWithExecutorService() {
-        MySQLite myTable = new MySQLite();
-        try {
-//            Thread.sleep(1000);
-            myTable.createTableEx();
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-        }
         final int THREADS_COUNT = 16;
         final CountDownLatch cdl = new CountDownLatch(THREADS_COUNT);
         long start = System.currentTimeMillis();
@@ -75,6 +69,5 @@ public class FibonacciTest {
         }
         executorService.shutdown();
         System.out.println(System.currentTimeMillis() - start);
-        myTable.disconnect();
     }
 }
